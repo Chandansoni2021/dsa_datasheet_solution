@@ -1,0 +1,27 @@
+if we talk about the method to solve it so we can say that let msk is a integer like 0
+and we can create new variable m and initialize it so if we talk about the inner part of 
+while so we saw that m=m>>1 it means like m = 101(5) so we can right swift when the number 
+is not zeo so we see that in first shift we get _10 and second shift we get _ 1 and at last 
+we get _ _ _ it means all are zero so our whilw loop is stop and we saw that mask =0 so
+we perform here left shift and one like 0+1 (where blank so there zero) so thease have 
+three times because our whilw loop terminate three time so we get the value of mask is 111.
+and we simply take not n (~n) and we perform & (and) operation with mask so we get our output
+WhatsApp Image 2023-01-11 at 12.49.29 AM.jpeg
+
+Code
+class Solution {
+public:
+    int bitwiseComplement(int n) {
+        int m=n;
+        int mask=0;
+        if(n==0){
+            return 1;
+        }
+        while(m!=0){
+            mask = (mask << 1) | 1;
+            m =m >>1;
+            }
+        return (~n) & mask;
+        }
+    
+};
